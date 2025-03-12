@@ -1,4 +1,4 @@
-# CSRF & SSRF Training
+# CSRF & SSRF
 
 ## Giới thiệu
 Đây là khoá học thực hành về **Cross-Site Request Forgery (CSRF)** và **Server-Side Request Forgery (SSRF)**. Mục tiêu của khoá học là giúp người học hiểu rõ về cách thức hoạt động, cách khai thác cũng như cách phòng chống hai loại tấn công này.
@@ -25,42 +25,3 @@
   - Xác thực và lọc dữ liệu đầu vào.
   - Chặn truy cập đến IP nội bộ (127.0.0.1, 169.254.x.x, v.v.).
   - Sử dụng danh sách trắng (whitelist) cho các URL bên ngoài.
-
-## Cách sử dụng
-### Yêu cầu hệ thống
-- Python 3.x
-- Flask
-- Docker (nếu muốn chạy môi trường cách ly)
-
-### Cài đặt
-```bash
-# Clone repository
-git clone https://github.com/your-username/csrf-ssrf-training.git
-cd csrf-ssrf-training
-
-# Cài đặt thư viện cần thiết
-pip install -r requirements.txt
-```
-
-### Chạy chương trình
-```bash
-python app.py
-```
-Ứng dụng sẽ chạy tại `http://localhost:5000`
-
-## Thực hành
-### 1. Kiểm tra CSRF
-- Mở trình duyệt và truy cập `http://localhost:5000/csrf`
-- Thử gửi form từ trang độc hại để kiểm tra lỗ hổng.
-- Kích hoạt CSRF Token và thử lại.
-
-### 2. Kiểm tra SSRF
-- Mở trình duyệt và truy cập `http://localhost:5000/ssrf?url=http://example.com`
-- Thử gửi yêu cầu đến IP nội bộ để kiểm tra mức độ bảo vệ của ứng dụng.
-
-## Đóng góp
-- Nếu bạn muốn đóng góp, vui lòng tạo một pull request hoặc mở một issue.
-
-## Giấy phép
-Dự án này được phát hành theo giấy phép MIT.
-
